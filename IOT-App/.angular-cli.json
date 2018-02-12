@@ -20,7 +20,9 @@
       "prefix": "app",
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.css",
-        "sass/styles.scss"
+        "sass/styles.scss",
+        "../node_modules/font-awesome/css/font-awesome.css",
+        "../node_modules/roboto-fontface/css/roboto/roboto-fontface.css"
       ],     
       "scripts": [],
       "environmentSource": "environments/environment.ts",
