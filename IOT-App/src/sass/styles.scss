@@ -1,0 +1,27 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import './variables';
+@import './mixins';
+@import 
+  '~bootstrap/scss/functions',
+  '~bootstrap/scss/variables',
+  '~bootstrap/scss/mixins',
+  '~bootstrap/scss/print',
+  '~bootstrap/scss/reboot',
+  '~bootstrap/scss/type';
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fafbfc;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #666666;
+}
+
+.bg-white{
+    background-color: #fff;
+}
+  
+.height100{
+    height: 100% !important;
+}
