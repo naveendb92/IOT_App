@@ -14,7 +14,7 @@ html, body {
     padding: 0;
     background-color: #fafbfc;
     font-family: sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     color: #666666;
 }
 
@@ -24,4 +24,7 @@ html, body {
   
 .height100{
     height: 100% !important;
+}
+.flex{
+    display: flex;
 }
