@@ -3,7 +3,7 @@
     margin: 0px;
 }
 .dashboard-div1{
-    background: #ddd;
+    background: #fff;
     width: 100%;
     margin: 0px;
     height: 50%;
@@ -20,11 +20,31 @@
 }
 .div-body{
     height: 85%;
-
-    div{
+    .latest_stats{
+        border-right: 1px solid #ddd;
+        border-top: 1px solid #ddd;
         width: 20%;
-        //border: 1px solid;
+    }
+    .latest_stats:nth-child(1){
+        border-left: 1px solid #ddd;
     }
 }
+.total-assets{
+    .chart-body{
+        height: 85%;
+    }
+    .chart-footer{
+        height: 15%;
+    }
+    .text{
+        font-size: 14px;
+        color: #31393c;
+    }
+    .value{
+        font-size: 12px;
+        color: #90a4ae;
+    }
+}
+
 
 

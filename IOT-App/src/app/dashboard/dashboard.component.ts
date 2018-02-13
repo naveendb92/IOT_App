@@ -5,63 +5,63 @@ import { Chart } from 'angular-highcharts';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
 
-  chart = new Chart({
-    credits: {
-      enabled: false
-    },
+  total_assets_options = {
     title: {
-      align: 'center',
-      verticalAlign: 'middle',
-      useHTML: true,
-      text: '<i class="fa fa-exclamation-triangle"></i>',
-      y: 0,
-      x:-10,
-      style: {
-        color: '#d8d8d8',
-        fontWeight: 'normal',
-        fontSize:'30px',
-        fontFamily: 'roboto'
-      }
+      text: 'Total Assets <br> 40',
     },
-    plotOptions: {
-      pie: {
-          allowPointSelect: true,
-          cursor: 'pointer',
-          dataLabels: {
-              enabled: false
-          },
-          showInLegend: true
-      }
+    subtitle:{
+      text:'Asset by Fleet',
+    }
+  }
+  total_assets_data = {
+    categories:['Fleet1', 'Fleet2', 'Fleet3', 'Fleet4', 'Fleet5', 'Fleet6'],
+    data:[180, 160, 106.4, 129.2, 144.0, 120]
+  }
+
+  comm_status_options = {
+    title: {
+      text: '<i class="fa fa-wifi"></i>',
+    },
+    subtitle:{
+      text:'Communication Status <br> 36',
+    }
+  }
+  comm_status_data = [
+    { name: 'Reporting',     y: 56.33, color : '#74d08b'    }, 
+    { name: 'Non Reporting',   y: 24.03, color : '#f3766a'  }
+  ]
+
+  alert_status_options = {
+    title: {
+      text: '<i class="fa fa-exclamation-triangle"></i>',
     },
     subtitle:{
       text:'Alert Status <br> 13',
-      style: {
-        color: '#32abf5',
-        fontWeight: 'normal',
-        fontSize:'16px',
-        fontFamily: 'roboto'
-      }
+    }
+  }
+  alert_status_data = [
+    { name: 'Off',     y: 56.33, color : '#f3766a'  }, 
+    { name: 'Critical',   y: 24.03, color : '#f4c37f'  }, 
+    { name: 'Warning',  y: 10.38, color : '#31393c'  }
+  ]
+
+  fence_status_options = {
+    title: {
+      text: '<i class="fa fa-map-marker"></i>',
     },
-    tooltip: {
-        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-    },
-    series:[
-      {
-        type:'pie',
-        name:'A',
-        innerSize: '85%',
-        data:[
-          { name: 'Off',     y: 56.33, color : '#f3766a'  }, 
-          { name: 'Critical',   y: 24.03, color : '#f4c37f'  }, 
-          { name: 'Warning',  y: 10.38, color : '#31393c'  }
-        ],
-      }
-    ]
-    });
+    subtitle:{
+      text:'Fence Status <br> 40',
+    }
+  }
+  fence_status_data = [
+    { name: 'Inside',     y: 60, color : '#74d08b'  }, 
+    { name: 'Outside',   y: 20, color : '#f3766a'  }
+  ]  
+
   constructor() { }
 
   ngOnInit() {

@@ -8,23 +8,45 @@
         <div class="col-md-2">Refresh</div>
       </div>
       <div class="flex col-md-12 div-body">
-        <div>chart1</div>
-        <div>chart2</div>
-          <div [chart]="chart"></div>
-        <div >chart4</div>
-        <div>chart5</div>
+        <div class="latest_stats">
+          <app-highmap></app-highmap>
+        </div>
+        <div class="latest_stats total-assets">
+            <div class="chart-body">
+              <app-horizontal-bar-chart [options]="total_assets_options" [data]="total_assets_data"></app-horizontal-bar-chart>
+            </div>
+            <div class="chart-footer d-flex justify-content-around bg-white">
+                <div class="d-flex align-items-center flex-sm-column">
+                  <div class="text">4 Alerts</div>
+                  <div class="value">Fleet2</div>
+                </div>
+                <div class="d-flex align-items-center flex-sm-column ">
+                  <div class="text">3 Alerts</div>
+                  <div class="value">Fleet8</div>
+                </div>
+            </div>         
+        </div>
+        <div class="latest_stats">
+          <app-donut-chart [options]="alert_status_options" [data]="alert_status_data"></app-donut-chart>
+        </div>
+        <div class="latest_stats">
+          <app-donut-chart [options]="comm_status_options" [data]="comm_status_data"></app-donut-chart>
+        </div>
+        <div class="latest_stats">
+          <app-donut-chart [options]="fence_status_options" [data]="fence_status_data"></app-donut-chart>
+        </div>
       </div>
     <!-- </div> -->
   </div>
   <div class="row width100 dashboard-div2">
     <div class="col-md-4">
-      Hello1
+      
     </div>
     <div class="col-md-4">
-      Hello
+      
     </div>
     <div class="col-md-4">
-      Hello
+      
     </div>
   </div>
 </div>
